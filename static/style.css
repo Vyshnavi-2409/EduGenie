@@ -1,39 +1,58 @@
 body{
-    background:white;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#eef4ff;
+}
+
+.container{
+    width:80%;
+    max-width:900px;
+    margin:40px auto;
+    text-align:center;
 }
 
 h1{
     color:#2563eb;
+    font-size:42px;
 }
 
 p{
-    font-size:20px;
-}
-body{
-    background:white;
+    color:#555;
 }
 
-h1{
-    color:#2563eb;
+input{
+    width:70%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
 }
 
-p{
-    font-size:20px;
+button{
+    padding:14px 24px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    margin-left:10px;
 }
 
-/* Ikkada nundi add cheyyi */
+button:hover{
+    background:#1d4ed8;
+}
 
 .answer-box{
-    width:80%;
-    margin:20px auto;
-    padding:15px;
+    margin-top:30px;
+    padding:20px;
     background:white;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
     text-align:left;
 }
 
 .answer-box p{
     white-space:pre-wrap;
-    line-height:1.7;
+    line-height:1.8;
 }

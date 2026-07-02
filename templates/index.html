@@ -1,35 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduGenie AI</title>
+
     <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
+
+<div class="container">
 
     <h1>🤖 EduGenie AI</h1>
 
+    <p>Your Google Gemini Powered Learning Assistant</p>
+
     <form action="/ask" method="post">
+
         <input
             type="text"
             name="question"
-            placeholder="Ask any question..."
-            style="width:350px;height:35px;"
+            placeholder="Ask anything..."
             required
         >
 
-        <br><br>
-
         <button type="submit">
-            Ask AI
+            🚀Generate
         </button>
+
     </form>
 
-    <br>
-
     <div class="answer-box">
-        <h3>Answer:</h3>
+
+        <h3>Answer</h3>
+
         <p>{{ answer }}</p>
+
     </div>
 
+</div>
+
 </body>
+
 </html>
