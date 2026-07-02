@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EduGenie AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <h1>🤖 EduGenie AI</h1>
+
+    <form action="/ask" method="post">
+        <input
+            type="text"
+            name="question"
+            placeholder="Ask any question..."
+            style="width:350px;height:35px;"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">
+            Ask AI
+        </button>
+    </form>
+
+    <br>
+
+    <div class="answer-box">
+        <h3>Answer:</h3>
+        <p>{{ answer }}</p>
+    </div>
+
+</body>
+</html>
