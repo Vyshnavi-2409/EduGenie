@@ -7,8 +7,6 @@ load_dotenv()
 
 api_key = os.getenv("GEMINI_API_KEY")
 
-print("API KEY =", api_key)
-print("LAST 6 =", api_key[-6:] if api_key else "None")
 
 genai.configure(api_key=api_key)
 
