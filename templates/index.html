@@ -1,47 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduGenie AI</title>
+
+    <title>EduGenie | Google Gemini Powered Learning Assistant</title>
 
     <link rel="stylesheet" href="/static/style.css">
-</head>
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
 <body>
 
-<div class="container">
+<header>
+<nav class="navbar">
 
-    <h1>🤖 EduGenie AI</h1>
+<div class="logo">
+<i class="fa-solid fa-graduation-cap"></i>
+<span>EduGenie</span>
+</div>
 
-    <p>Your Google Gemini Powered Learning Assistant</p>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/chat">AI Chat</a></li>
+    <li><a href="/pdf">PDF Summarizer</a></li>
+    <li><a href="/quiz">Quiz Generator</a></li>
+</ul>
 
-    <form action="/ask" method="post">
+<a href="/chat" class="btn">Get Started</a>
+</nav>
+</header>
+<section class="hero">
+<div class="hero-left">
 
-        <input
-            type="text"
-            name="question"
-            placeholder="Ask anything..."
-            required
-        >
+<h1>
 
-        <button type="submit">
-            🚀Generate
+Learn Smarter with
+<span>Google Gemini AI</span>
+</h1>
+
+<p>
+EduGenie is an intelligent AI-powered learning assistant that helps students generate notes, summarize PDFs, create quizzes, and learn faster using Google's Gemini model.
+</p>
+
+<div class="buttons">
+
+<a href="/chat" class="primary-btn">
+
+AI Chat
+
+</a>
+
+<a href="/pdf" class="secondary-btn">
+    PDF Summarizer
+</a>
+<a href="/quiz" class="secondary-btn">
+    Quiz Generator
+</a>
+<a href="/notes" class="secondary-btn">
+    Notes Generator
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="glass-card">
+
+    <div class="chat-header">
+        <i class="fa-solid fa-robot"></i>
+        <span>EduGenie AI</span>
+    </div>
+
+    <div class="chat-box">
+
+        <div class="ai-msg">
+            👋 Hello! I'm EduGenie. How can I help you today?
+        </div>
+
+        <div class="user-msg">
+            Summarize my AI notes.
+        </div>
+
+        <div class="ai-msg">
+            ✅ Your notes are summarized successfully.
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+        <input type="text" placeholder="Ask anything...">
+        <button>
+            <i class="fa-solid fa-paper-plane"></i>
         </button>
-
-    </form>
-
-    <div class="answer-box">
-
-        <h3>Answer</h3>
-
-        <p>{{ answer }}</p>
-
     </div>
 
 </div>
 
-</body>
+</div>
 
+</section>
+
+<section id="features" class="features">
+
+
+<h2>Powerful Features</h2>
+
+<div class="feature-grid">
+
+<div class="card">
+<i class="fa-solid fa-robot"></i>
+<h3>AI Chat</h3>
+<p>Ask academic questions instantly using Google Gemini.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-file-pdf"></i>
+<h3>PDF Summarizer</h3>
+<p>Upload notes and receive concise summaries.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-note-sticky"></i>
+<h3>Notes Generator</h3>
+<p>Create well-structured study notes in seconds.</p>
+</div>
+
+
+<div class="card">
+<i class="fa-solid fa-circle-question"></i>
+<h3>Quiz Generator</h3>
+<p>Generate quizzes automatically from uploaded content.</p>
+</div>
+
+</div>
+</section>
+<section class="why-edugenie">
+
+    <h2>Why Choose EduGenie?</h2>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Fast AI Responses</h3>
+            <p>Get instant answers powered by Google Gemini AI.</p>
+        </div>
+
+        <div class="why-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Smart Learning</h3>
+            <p>Understand concepts with summaries, notes and quizzes.</p>
+        </div>
+
+        <div class="why-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Secure & Reliable</h3>
+            <p>Your learning data stays safe with modern security.</p>
+        </div>
+
+        <div class="why-card">
+            <i class="fa-solid fa-language"></i>
+            <h3>Multi-language</h3>
+            <p>Learn in multiple languages for better understanding.</p>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
 </html>

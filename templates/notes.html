@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Generator</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+
+<div class="chat-wrapper">
+
+    <h1>📝 Notes Generator</h1>
+
+    <p>Paste your notes or paragraph and generate AI-powered study notes instantly.</p>
+
+    <form action="/generate-notes" method="post" class="notes-form">
+
+        <textarea
+            name="text"
+            placeholder="Paste your notes or paragraph here..."
+            required></textarea>
+
+        <button type="submit" class="pdf-btn">
+            Generate Notes
+        </button>
+
+    </form>
+
+    {% if notes %}
+    <div class="ai-response">
+        {{ notes | safe }}
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

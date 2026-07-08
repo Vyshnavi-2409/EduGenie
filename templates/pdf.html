@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Summarizer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+
+<body>
+
+<div class="chat-wrapper">
+
+    <h1>📄 PDF Summarizer</h1>
+    <p>Upload a PDF and get a simple AI-generated summary instantly.</p>
+
+    <form action="/summarize" method="post" enctype="multipart/form-data" class="pdf-form">
+
+        <input
+            type="file"
+            name="pdf"
+            accept=".pdf"
+            required>
+
+        <button type="submit" class="pdf-btn">
+            Summarize
+        </button>
+
+    </form>
+
+    {% if summary %}
+    <div class="ai-response">
+        {{ summary | safe }}
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

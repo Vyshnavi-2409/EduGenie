@@ -3,3 +3,6 @@ uvicorn
 jinja2
 python-dotenv
 google-generativeai
+markdown
+pypdf
+python-multipart
