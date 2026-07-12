@@ -13,6 +13,13 @@
 <body>
 
 <div class="chat-wrapper">
+<div class="top-bar">
+
+    <a href="/" class="home-btn">
+        🏠 Home
+    </a>
+
+</div>
 
     <h1>🤖 EduGenie AI Chat</h1>
     <p>Ask anything and get AI-powered answers instantly.</p>
@@ -28,11 +35,18 @@
 
     {% if answer %}
     <div class="message ai">
-        <strong>🤖 EduGenie</strong><br><br>
+        <div class="chat-header">
+            <i class="fa-solid fa-robot"></i>
+            <strong>EduGenie AI</strong>
+        </div>
         {{ answer | safe }}
     </div>
     {% else %}
     <div class="message ai">
+        <div class="chat-header">
+            <i class=""fa-solid fa-robat"></i>
+            <strong>EduGenie AI</strong>
+        </div>
         👋 Hello! Ask me anything about your studies.
     </div>
     {% endif %}
@@ -54,6 +68,16 @@
     </form>
 
 </div>
+<script>
 
+const form=document.querySelector(".chat-form");
+form.addEventListener("submit",function(){
+const btn=form.querySelector("button");
+btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i>';
+btn.disabled=true;
+
+});
+
+</script>
 </body>
 </html>

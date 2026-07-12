@@ -7,35 +7,160 @@
 
     <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
 </head>
+
 <body>
 
 <div class="chat-wrapper">
+    <div class="top-bar">
+
+    <a href="/" class="home-btn">
+        🏠 Home
+    </a>
+
+</div>
 
     <h1>📝 Quiz Generator</h1>
 
-    <p>Upload a PDF and generate AI-powered quiz questions instantly.</p>
+    <p>Generate AI-powered quizzes on any topic.</p>
 
-    <form action="/generate-quiz" method="post" enctype="multipart/form-data" class="pdf-form">
+    <form action="/generate-quiz" method="post" class="pdf-form">
+        
 
         <input
-            type="file"
-            name="pdf"
-            accept=".pdf"
+            type="text"
+            name="topic"
+            placeholder="Enter Topic (Example: Python)"
             required>
 
-        <button type="submit" class="pdf-btn">
+        <button class="pdf-btn" type="submit">
             Generate Quiz
         </button>
 
     </form>
 
+    {% if error %}
+
+        <div class="ai-response">
+            <h3 style="color:red">{{ error }}</h3>
+            <pre>{{ raw }}</pre>
+        </div>
+
+    {% endif %}
+
     {% if quiz %}
-    <div class="ai-response">
-        {{ quiz | safe }}
-    </div>
+
+        <h2 style="margin-top:30px;">Quiz on {{ topic }}</h2>
+
+        {% for q in quiz %}
+
+        <div class="question">
+
+            <h3>Q{{ loop.index }}. {{ q.question }}</h3>
+
+            {% for option in q.options %}
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="q{{ q.id }}"
+                    value="{{ option }}">
+
+                {{ option }}
+
+            </label>
+
+            <br>
+
+            {% endfor %}
+
+            <br>
+
+            <button
+                type="button"
+                class="pdf-btn"
+                onclick='checkAnswer({{ q.id }}, {{ q.answer|tojson }})'>
+
+                Check Answer
+
+            </button>
+
+            <p
+                id="result{{ q.id }}"
+                style="margin-top:10px;font-weight:bold;">
+            </p>
+
+        </div>
+
+        <hr>
+
+        {% endfor %}
+
     {% endif %}
 
 </div>
+
+<script>
+
+function checkAnswer(questionId, answer){
+
+    const radios = document.getElementsByName("q" + questionId);
+
+    let selected = null;
+
+    for(let i=0;i<radios.length;i++){
+
+        if(radios[i].checked){
+
+            selected = radios[i];
+
+            break;
+
+        }
+
+    }
+
+    const result =
+    document.getElementById("result"+questionId);
+
+    if(selected === null){
+
+        result.innerHTML =
+        "⚠️ Please select an option.";
+
+        result.style.color = "orange";
+
+        return;
+
+    }
+
+    if(
+        selected.value.trim().toLowerCase() ===
+        answer.trim().toLowerCase()
+    ){
+
+        result.innerHTML =
+        "✅ Correct!";
+
+        result.style.color =
+        "green";
+
+    }
+
+    else{
+
+        result.innerHTML =
+        "❌ Wrong!<br><strong>Correct Answer:</strong> "
+        + answer;
+
+        result.style.color =
+        "red";
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
