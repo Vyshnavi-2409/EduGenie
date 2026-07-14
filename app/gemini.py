@@ -5,12 +5,6 @@ import markdown
 
 load_dotenv()
 
-api_key = os.getenv("GEMINI_API_KEY")
-print(api_key)
-print(len(api_key) if api_key else "No Key")
-
-client = genai.Client(api_key=api_key)
-
 client = genai.Client(
     api_key=os.getenv("GEMINI_API_KEY")
 )
