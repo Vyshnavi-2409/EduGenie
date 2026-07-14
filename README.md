@@ -1,21 +1,70 @@
-**AI-ML-and-GEN-AI-Track-Project-Template**
+# EduGenie - Google Gemini Powered Learning Assistant
+## Description
+EduGenie is an AI-powered learning assistant built using Google's Gemini API to provide students with a personalized, interactive, and intelligent learning experience. The application helps users understand concepts, generate study materials, answer academic questions, summarize notes, create quizzes, and receive instant AI-powered guidance across various subjects.
 
-**Repository Structure**
+Designed with a user-friendly interface, EduGenie makes learning more efficient by combining the power of Generative AI with modern web technologies. It serves as a virtual tutor that adapts to students' learning needs, helping them improve their understanding, productivity, and academic performance.
 
-1.Brainstorming & Ideation
+----
+## Features
+- 🤖 AI-powered responses using Google Gemini
+- 📚 Personalized learning assistance
+- 📝 Notes summarization and explanation
+- ❓ Question answering across multiple subjects
+- 🧠 Quiz and practice question generation
+- 💡 Simple and intuitive user interface
+- ⚡ Fast, accurate, and interactive learning support
 
-2.Requirement Analysis
+----
 
-3.Project Design Phase
+## 🛠️ Technologies Used
 
-4.Project Planning Phase
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
 
-5.Project Development Phase
+### AI Integration
+- Google Gemini API
 
-6.Project Testing
+### Backend
+- Python (Flask)
 
-7.Project Documentation
+### Libraries & Tools
+- FPDF (PDF Generation)
+- Requests (API Communication)
 
-8.Project Demonstration
+### Development Tools
+- Visual Studio Code
+- Git
+- GitHub
 
-Replace the placeholder files with your team's project deliverables.
+### Deployment (if deployed)
+- Render / Vercel / Netlify
+
+----
+## Project Structure
+## 📂 Project Structure
+
+```
+EduGenie/
+│── static/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/
+│
+│── templates/
+│   └── index.html
+│
+│── app.py
+│── requirements.txt
+│── README.md
+│── .gitignore
+│── LICENSE
+```
+## Demo Video
+
+
+
+1
