@@ -65,6 +65,6 @@ EduGenie/
 ```
 ## Demo Video
 
+https://drive.google.com/file/d/1ejiG0vJcudnMf0SASiYEX4apg5KBeObj/view?usp=drivesdk
 
 
-1
